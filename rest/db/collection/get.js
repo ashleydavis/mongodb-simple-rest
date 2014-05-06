@@ -1,3 +1,6 @@
+//
+// Get a collection or document from the database.
+//
 
 module.exports = {
 
