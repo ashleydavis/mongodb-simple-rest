@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/ashleydavis/mongodb-simple-rest",
   "dependencies": {
-    "routey": "0.0.2",
+    "routey": "0.0.3",
     "express": "^4.1.1",
     "mongodb": "^1.4.3",
     "args": "0.0.3"
