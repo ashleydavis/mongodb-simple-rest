@@ -1,0 +1,24 @@
+{
+  "name": "mongodb-simple-rest",
+  "version": "0.0.0",
+  "description": "A simple (to use) REST API for MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashleydavis/mongodb-simple-rest.git"
+  },
+  "keywords": [
+    "REST",
+    "MONGODB",
+    "routey"
+  ],
+  "author": "Ashley Davis",
+  "license": "MIT licence",
+  "bugs": {
+    "url": "https://github.com/ashleydavis/mongodb-simple-rest/issues"
+  },
+  "homepage": "https://github.com/ashleydavis/mongodb-simple-rest"
+}
