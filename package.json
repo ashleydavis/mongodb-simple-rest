@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/ashleydavis/mongodb-simple-rest/issues"
   },
-  "homepage": "https://github.com/ashleydavis/mongodb-simple-rest"
+  "homepage": "https://github.com/ashleydavis/mongodb-simple-rest",
+  "dependencies": {
+    "routey": "0.0.2"
+  }
 }
