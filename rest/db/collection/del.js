@@ -2,6 +2,7 @@
 // Delete a document from the database.
 //
 
+var mongo = require("mongodb");
 var BSON = mongo.BSONPure;
 
 module.exports = {

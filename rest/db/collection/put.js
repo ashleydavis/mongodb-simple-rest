@@ -2,6 +2,7 @@
 // Update a document into the database.
 //
 
+var mongo = require("mongodb");
 var BSON = mongo.BSONPure;
 
 module.exports = {
