@@ -2,26 +2,28 @@
 // Delete a document from the database.
 //
 
-var mongo = require("mongodb");
-var BSON = mongo.BSONPure;
+module.exports = function () {
 
-module.exports = {
+    var mongo = require("mongodb");
 
-	route: ':id',
+    return {
 
-	handler: function (req, res, params, done) {
+    	route: ':id',
 
-        var criteria = {
-            _id: new BSON.ObjectID(req.params.id)
-        };
+    	handler: function (req, res, params, done) {
 
-        params.collection.remote(criteria, function (err, docs) {
-            if (err) {
-                throw err;
-            }
+            var criteria = {
+                _id: new mongo.BSONPure.ObjectID(req.params.id)
+            };
 
-            res.send(200);
-            done();
-        });
-	},
+            params.collection.remote(criteria, function (err, docs) {
+                if (err) {
+                    throw err;
+                }
+
+                res.send(200);
+                done();
+            });
+    	},
+    };
 };

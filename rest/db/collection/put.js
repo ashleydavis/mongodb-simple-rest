@@ -2,26 +2,28 @@
 // Update a document into the database.
 //
 
-var mongo = require("mongodb");
-var BSON = mongo.BSONPure;
+module.exports = function () {
+    
+    var mongo = require("mongodb");
 
-module.exports = {
+    return {
 
-	route: ':id',
+    	route: ':id',
 
-	handler: function (req, res, params, done) {
+    	handler: function (req, res, params, done) {
 
-        var criteria = {
-            _id: new BSON.ObjectID(req.params.id)
-        };
+            var criteria = {
+                _id: new mongo.BSONPure.ObjectID(req.params.id)
+            };
 
-        params.collection.update(criteria, req.body, true, function (err, docs) {
-            if (err) {
-                throw err;
-            }
+            params.collection.update(criteria, req.body, true, function (err, docs) {
+                if (err) {
+                    throw err;
+                }
 
-            res.send(200);
-            done();
-        });
-	},
+                res.send(200);
+                done();
+            });
+    	},
+    };
 };
