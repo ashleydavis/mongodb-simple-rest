@@ -46,7 +46,7 @@ app.use(require('body-parser')());
 // Logging.
 app.use(require('morgan')('dev'));
 
-var restServer = require('./restServer');
+var restServer = require('./mongodb-rest');
 
 restServer({
 	host: parsed.dbhost,

@@ -2,7 +2,7 @@
   "name": "mongodb-simple-rest",
   "version": "0.0.3",
   "description": "A simple (to use) REST API for MongoDB",
-  "main": "mongodb-simple-rest.js",
+  "main": "mongodb-rest.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
