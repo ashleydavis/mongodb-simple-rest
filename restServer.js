@@ -7,6 +7,12 @@ module.exports = function (config, app) {
 	routey({
 	    routeConfigPath: path.join(__dirname, "rest"),
 	    verbose: true,
-	    handlerParams: config,
+	    handlerParams: {
+	    	host: config.host,
+	    	port: config.port,
+	    	logger: config.logger,
+	    },
+	    parentRoute: config.parentRoute,
+
 	}, app);
 };
