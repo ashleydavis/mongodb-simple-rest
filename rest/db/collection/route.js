@@ -5,7 +5,7 @@ module.exports = {
 
 	openRoute: function (req, res, params, done) {
 
-		console.log('Opening collection ' + req.params.collection);
+		params.logger.info('Opening collection ' + req.params.collection);
 
 		params.db.collection(req.params.collection, function (err, collection) {
 			if (err) {

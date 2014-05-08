@@ -1,0 +1,1 @@
+curl -X DEL localhost:3000/test/test/536a160ca558cf941cd4eb0e

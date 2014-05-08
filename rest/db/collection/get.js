@@ -14,6 +14,13 @@ module.exports = {
 				{};
 		var options = {};
 
+		if (haveId) {
+	        params.logger.info("Getting single document: " + req.params.id);
+		}
+		else {
+			params.logger.info("Getting all documents");	
+		}
+
 		params.collection.find(query, options, function(err, cursor) {		
 			if (err) {
 				throw err;

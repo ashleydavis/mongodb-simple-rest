@@ -6,7 +6,7 @@ module.exports = {
 
 	openRoute: function (req, res, params, done) {
 
-		console.log('Opening database ' + req.param.db + ' on host: ' + params.host + ":" + params.port);
+		params.logger.info('Opening database ' + req.params.db + ' on host: ' + params.host + ":" + params.port);
 
 		// Open the database.
 		var server = new mongo.Server(params.host, params.port, {

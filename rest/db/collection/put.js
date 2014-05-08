@@ -12,6 +12,9 @@ module.exports = function () {
 
     	handler: function (req, res, params, done) {
 
+            params.logger.info("Updating document: " + req.params.id);
+            params.logger.info(req.body);
+
             var criteria = {
                 _id: new mongo.BSONPure.ObjectID(req.params.id)
             };
