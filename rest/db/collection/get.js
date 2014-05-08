@@ -11,17 +11,18 @@ module.exports = function () {
 		handler: function (req, res, params, done) {
 
 			var haveId = req.params.id;
-			var query = haveId ?
-					{ _id: new mongo.BSONPure.ObjectID(req.params.id) } :
-					{};
-			var options = {};
-
 			if (haveId) {
 		        params.logger.info("Getting single document: " + req.params.id);
 			}
 			else {
 				params.logger.info("Getting all documents");	
 			}
+
+			var query = haveId ?
+					{ _id: new mongo.BSONPure.ObjectID(req.params.id) } :
+					{};
+			var options = {};
+
 
 			params.collection.find(query, options, function(err, cursor) {		
 				if (err) {
