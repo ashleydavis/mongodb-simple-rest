@@ -1,6 +1,6 @@
 {
   "name": "mongodb-simple-rest",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple (to use) REST API for MongoDB",
   "main": "server.js",
   "scripts": {
