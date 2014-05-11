@@ -6,13 +6,9 @@ module.exports = {
 
 	openRoute: function (req, res, params, done) {
 
-		params.logger.info('Opening database ' + req.params.db + ' on host: ' + params.host + ":" + params.port);
+		params.logger.info('Opening database ' + req.params.db);
 
-		// Open the database.
-		var server = new mongo.Server(params.host, params.port, {
-			auto_reconnect: true
-		});
-	    var db = new mongo.Db(req.params.db, server);
+	    var db = new mongo.Db(req.params.db, params.server);
 	    db.open(function(err, db) {
 	    	if (err) {
 	    		throw err;
@@ -26,7 +22,7 @@ module.exports = {
 
 	closeRoute: function (req, res, params, done) {
 
-		console.log('close db');
+		console.log('closing db: ' + req.params.db);
 
 		// Close the database.
 		params.db.close();
