@@ -23,7 +23,6 @@ module.exports = function () {
 					{};
 			var options = {};
 
-
 			params.collection.find(query, options, function(err, cursor) {		
 				if (err) {
 					throw err;
@@ -33,6 +32,8 @@ module.exports = function () {
 	            	if (err) {
 	            		throw err;
 	            	}
+
+	            	params.logger.info("Retreived " + docs.length + " from database.");
 
 	                if(req.params.id) {
 	                    if(docs.length > 0) {
