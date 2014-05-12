@@ -30,9 +30,6 @@ module.exports = function () {
 				query = {};
 			}
 
-			var query = haveId ?
-					 :
-					{};
 			var options = {};
 
 			params.collection.find(query, options, function(err, cursor) {		
