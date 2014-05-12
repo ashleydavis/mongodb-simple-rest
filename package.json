@@ -1,6 +1,6 @@
 {
   "name": "mongodb-simple-rest",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A simple (to use) REST API for MongoDB",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
