@@ -1,6 +1,6 @@
 {
   "name": "mongodb-simple-rest",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A simple (to use) REST API for MongoDB",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/ashleydavis/mongodb-simple-rest",
   "dependencies": {
-    "routey": "0.0.5",
+    "routey": "0.0.6",
     "express": "^4.1.1",
     "mongodb": "^1.4.3",
     "args": "0.0.3",
